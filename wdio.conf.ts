@@ -53,8 +53,15 @@ export const config: WebdriverIO.Config = {
     //
     capabilities: [{
         // capabilities for local browser web tests
-        browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
-    }],
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: [
+                '--headless', // Run in headless mode (optional)
+                '--disable-gpu', // Disable GPU acceleration (optional in headless mode)
+                '--window-size=1280,720' // Set the window size
+            ]
+        }
+    }], 
 
     //
     // ===================
