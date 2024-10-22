@@ -56,7 +56,7 @@ export const config: WebdriverIO.Config = {
         browserName: 'chrome',
         'goog:chromeOptions': {
             args: [
-                '--headless', // Run in headless mode (optional)
+                // '--headless', // Run in headless mode (optional)
                 '--disable-gpu', // Disable GPU acceleration (optional in headless mode)
                 '--window-size=1280,720' // Set the window size
             ]

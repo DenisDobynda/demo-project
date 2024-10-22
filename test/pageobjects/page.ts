@@ -5,7 +5,7 @@ import { browser } from '@wdio/globals'
 * that is shared across all page objects
 */
 
-const defaultTimeout = 1900000;
+const defaultTimeout = 30000;
 
 export default class Page {
     /**
