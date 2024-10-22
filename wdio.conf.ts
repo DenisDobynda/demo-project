@@ -135,6 +135,14 @@ export const config: WebdriverIO.Config = {
             disableWebdriverScreenshotsReporting: false,
         }]
       ],
+          // Hook for taking screenshots on failure
+    afterTest: async (test, context, { error, result, duration, passed }) => {
+        if (!passed) {
+            // Take a screenshot when the test fails
+            console.log(`Test failed: ${test.title}`);
+            await browser.takeScreenshot();
+        }
+    },
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
